@@ -26,7 +26,7 @@ public class BaseBallGame {
             Pair result = getResult(answer, table, input);
 
             // 결과 출력.
-            System.out.printf("%sB%sS%n", result.ball, result.strike);
+            printResult(result.ball, result.strike);
 
             if(result.strike == 3) {
                 // 만약 3S면 게임을 종료.
@@ -56,6 +56,18 @@ public class BaseBallGame {
             }
         }
         return new Pair(ball, strike);
+    }
+
+    private static void printResult(int ball, int strike) {
+        if(ball == 0 && strike == 0) {
+            System.out.printf("%sB%sS%n", ball, strike);
+        } else if (ball == 0) {
+            System.out.printf("%sS%n", strike);
+        } else if (strike == 0) {
+            System.out.printf("%sB%n", ball);
+        } else {
+            System.out.printf("%sB%sS%n", ball, strike);
+        }
     }
 
     public static Set<Character> getTable(String answer) {

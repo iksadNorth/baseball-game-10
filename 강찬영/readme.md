@@ -55,7 +55,7 @@ public class baseball {
             // 번호입력 for문 끝
 
             for (int i = 0; i < InsertNum.length; i++) { // 난수와 입력한 수 확인 시작
-                for (int j = 0; j <= i; j++) {
+                for (int j = 0; j < 3; j++) {
                     if (InsertNum[i] == num[j]) { //난수와 입력한 배열을 비교해서 같을때 if문 시작
                         if (i == j) { //배열 위치도 일치할때
                             strike++;
